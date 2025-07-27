@@ -1,8 +1,3 @@
-// Copyright (C) 2025 Petr Malik
-//
-// This Source Code Form is subject to the terms of the Mozilla Public
-// License, v. 2.0. If a copy of the MPL was not distributed with this
-// file, You can obtain one at <https://mozilla.org/MPL/2.0/>.
 
 package main
 
@@ -97,22 +92,6 @@ const (
         Libero sed nulla.`
 )
 
-var (
-	allOutputFormatsEnabled = map[string]bool{
-		"csv":  true,
-		"html": true,
-	}
-	noOutputFormatsEnabled = map[string]bool{
-		"csv":  false,
-		"html": false,
-	}
-	expectedStdoutMessages = []string{
-		"Current working directory:",
-		"Configuration directory:",
-		"Loading configuration from file:",
-		"Loading tasks from file:",
-	}
-)
 
 func TestCommands(t *testing.T) {
 	tests := []struct {
